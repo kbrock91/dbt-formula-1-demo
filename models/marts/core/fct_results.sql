@@ -49,6 +49,7 @@ circuits as (
         position,
         position_text,
         position_order,
+        winner_flag,
         points,
         laps,
         results_time_formatted, 
@@ -67,4 +68,4 @@ circuits as (
         on int_results.driver_id=int_pit_stops.driver_id and int_results.race_id=int_pit_stops.race_id
  )
 
-select * from base_results 
+select * from base_results

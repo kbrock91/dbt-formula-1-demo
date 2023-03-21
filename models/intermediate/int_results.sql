@@ -50,6 +50,7 @@ int_results as (
       position,
       position_text,
       position_order,
+      case when position = 1 then 1 else 0 end as winner_flag,
       points,
       laps,
       results_time_formatted, 
