@@ -1,4 +1,4 @@
-name: 'snowflake_python_workshop'
+name: 'formula_1_demo'
 version: '1.3.0'
 require-dbt-version: '>=1.3.0'
 config-version: 2
@@ -22,7 +22,7 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 models:
-  snowflake_python_workshop:
+  formula_1_demo:
     staging:
       +docs:
         node_color: "CadetBlue"
