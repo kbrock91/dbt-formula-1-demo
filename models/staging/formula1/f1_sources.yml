@@ -39,6 +39,11 @@ sources:
                   quote: false            
       - name: races 
         description: One race per row. Importantly this table contains the race year to understand trends. 
+        freshness:
+          error_after:
+            count: 10000
+            period: day
+        loaded_at_field: race_date   
         columns:
           - name: raceid
             tests:
