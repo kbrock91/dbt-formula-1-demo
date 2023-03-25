@@ -1,8 +1,15 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 with int_results as (
 
   select * from {{ ref('int_results') }}
 
 ),
+
 
 int_pit_stops as (
   select 
@@ -59,9 +66,8 @@ circuits as (
         fastest_lap_time_formatted,
         fastest_lap_speed, 
         status_id,
-        status,
-        dnf_flag
-     from int_results
+        status
+             from int_results
      left join circuits
         on int_results.circuit_id=circuits.circuit_id
      left join int_pit_stops 
