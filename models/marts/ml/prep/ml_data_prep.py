@@ -3,7 +3,6 @@ import pandas as pd
 def model(dbt, session):
     # dbt configuration
     dbt.config(
-        enabled=False, 
         packages=["pandas"]
     )
 
