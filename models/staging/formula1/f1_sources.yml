@@ -43,7 +43,7 @@ sources:
           error_after:
             count: 10000
             period: day
-        loaded_at_field: race_date   
+        loaded_at_field: date   
         columns:
           - name: raceid
             tests:
