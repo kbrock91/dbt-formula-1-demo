@@ -43,7 +43,7 @@ sources:
           error_after:
             count: 10000
             period: day
-        loaded_at_field: date   
+        loaded_at_field: "date::timestamp"
         columns:
           - name: raceid
             tests:
