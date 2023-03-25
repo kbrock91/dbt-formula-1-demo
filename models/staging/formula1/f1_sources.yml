@@ -40,6 +40,9 @@ sources:
       - name: races 
         description: One race per row. Importantly this table contains the race year to understand trends. 
         freshness:
+          warn_after:
+            count: 100
+            period: day
           error_after:
             count: 10000
             period: day
