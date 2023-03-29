@@ -11,6 +11,7 @@ with int_results as (
 ),
 
 
+
 int_pit_stops as (
   select 
     race_id,
