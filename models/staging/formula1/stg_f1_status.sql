@@ -8,7 +8,7 @@ source  as (
 
 renamed as (
     select 
-        statusid as status_id,
+        status_id,
         status 
     from source
 )

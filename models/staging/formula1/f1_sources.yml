@@ -3,27 +3,27 @@ version: 2
 sources:
   - name: formula1
     description: formula 1 datasets with normalized tables 
-    database: formula1 
+    database: formula1
     schema: raw
     tables:
       - name: circuits
         description: One record per circuit, which is the specific race course. 
         columns:
-          - name: circuitid
+          - name: circuit_id
             tests:
             - unique
             - not_null
       - name: constructors 
         description: One record per constructor. Constructors are the teams that build their formula 1 cars. 
         columns:
-          - name: constructorid
+          - name: constructor_id
             tests:
             - unique
             - not_null
       - name: drivers
         description: One record per driver. This table gives details about the driver. 
         columns:
-          - name: driverid
+          - name: driver_id
             tests:
             - unique
             - not_null
@@ -39,14 +39,22 @@ sources:
                   quote: false            
       - name: races 
         description: One race per row. Importantly this table contains the race year to understand trends. 
+        freshness:
+          warn_after:
+            count: 100
+            period: day
+          error_after:
+            count: 10000
+            period: day
+        loaded_at_field: "date::timestamp"
         columns:
-          - name: raceid
+          - name: race_id
             tests:
             - unique
             - not_null        
       - name: results
         columns:
-          - name: resultid
+          - name: result_id
             tests:
             - unique
             - not_null   
@@ -54,7 +62,7 @@ sources:
       - name: status
         description: One status per row. The status contextualizes whether the race was finished or what issues arose e.g. collisions, engine, etc. 
         columns:
-          - name: statusid
+          - name: status_id
             tests:
             - unique
             - not_null   

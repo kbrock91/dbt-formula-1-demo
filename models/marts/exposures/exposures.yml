@@ -1,0 +1,11 @@
+version: 2
+
+exposures:
+  - name: Formula1
+    type: dashboard
+    url: https://10ax.online.tableau.com/#/site/dbtcloudkb/views/Formula1DashboardDemo/Dashboard1?:iid=4
+    description: Tableau Dashboard for Formula 1 Data
+    owner:
+      email: katherine.brock@formula1.com
+    depends_on:
+      - ref('fct_results')

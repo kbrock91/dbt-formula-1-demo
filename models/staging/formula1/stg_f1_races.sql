@@ -8,14 +8,13 @@ source  as (
 
 renamed as (
     select 
-        raceid as race_id,
+        race_id,
         year as race_year, 
         round as race_round,
-        circuitid as circuit_id,
+        circuit_id,
         name as circuit_name,
         date as race_date,
         to_time(time) as race_time, 
-        -- omit the url 
         fp1_date as free_practice_1_date,
         fp1_time as free_practice_1_time,
         fp2_date as free_practice_2_date,
