@@ -8,8 +8,8 @@ source  as (
 
 renamed as (
     select 
-        raceid as race_id, 
-        driverid as driver_id,
+        race_id, 
+        driver_id,
         lap,
         position, 
         time as lap_time_formatted,
