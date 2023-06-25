@@ -41,11 +41,3 @@ models:
       core:
         +docs:
           node_color: "#800080"
-
-      ml:
-        prep:
-          +docs:
-            node_color: "Indigo"
-        train_predict:
-          +docs:
-            node_color: "#36454f"
